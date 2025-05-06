@@ -107,4 +107,35 @@ $(document).ready(function() {
         
         window.open(shareUrl, 'share', `width=${width},height=${height},left=${left},top=${top}`);
     });
+
+    // Video Modal Functionality
+    const $videoModal = $('#videoModal');
+    const $watchDemoBtn = $('#watchDemoBtn');
+    const $closeVideoBtn = $('#closeVideoBtn');
+    const $video = $videoModal.find('video');
+
+    // Open modal
+    $watchDemoBtn.on('click', function(e) {
+        e.preventDefault();
+        $videoModal.addClass('active');
+    });
+
+    // Close modal
+    $closeVideoBtn.on('click', function() {
+        $videoModal.removeClass('active');
+    });
+
+    // Close modal when clicking outside
+    $videoModal.on('click', function(e) {
+        if ($(e.target).is($videoModal)) {
+            $videoModal.removeClass('active');
+        }
+    });
+
+    // Close modal with Escape key
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' && $videoModal.hasClass('active')) {
+            $videoModal.removeClass('active');
+        }
+    });
 }); 
