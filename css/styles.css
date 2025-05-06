@@ -496,6 +496,11 @@ footer a:hover {
     filter: brightness(2);
 }
 
+.social-media-links img.x-logo {
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
 /* CTA Buttons */
 .cta-buttons {
     display: flex;
