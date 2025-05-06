@@ -79,7 +79,7 @@ $(document).ready(function() {
     $('.social-media-links a').on('click', function(e) {
         e.preventDefault();
         const platform = $(this).attr('aria-label').toLowerCase();
-        const url = encodeURIComponent('https://tccao.github.io/Obs.ai-Website/');
+        const url = encodeURIComponent('https://tccao.github.io/obs.ai/');
         const title = encodeURIComponent('OBS.ai - An Ai-Powered Analytics Platform');
         const description = encodeURIComponent('Transform your business with AI-driven analytics to unlock insights and drive growth');
         
